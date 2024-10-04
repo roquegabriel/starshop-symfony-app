@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block title %}
+	{{ship.name}}
+{% endblock %}
+{% block body %}
+	<h2>{{ship.name}}</h2>
+	<ul style="list-style-type: none;">
+		<li>{{ship.captain}}</li>
+		<li>{{ship.class}}</li>
+		<li>{{ship.status}}</li>
+	</ul>
+{% endblock %}
