@@ -3,10 +3,34 @@
 	{{ship.name}}
 {% endblock %}
 {% block body %}
-	<h2>{{ship.name}}</h2>
-	<ul style="list-style-type: none;">
-		<li>{{ship.captain}}</li>
-		<li>{{ship.class}}</li>
-		<li>{{ship.status}}</li>
-	</ul>
+	<section>
+
+		<div class="mt-4 ml-4">
+			<a href="{{path('app_homepage')}}" class="bg-slate-200 text-black rounded-md p-1">&larr; Back</a>
+		</div>
+
+		<div class="grid grid-cols-2">
+			<div class="p-5">
+				<img src="{{asset('images/spaceship1.png')}}" class="" alt="">
+			</div>
+			<div>
+				<div class="border-b border-b-slate-500 py-5 space-y-4">
+					<span class="bg-slate-600 py-1 px-2 rounded-lg uppercase text-xs">{{ship.statusString}}</span>
+					<h2 class="text-3xl font-bold">{{ship.name}}</h2>
+				</div>
+
+				<div class="p-4">
+					<h3 class="uppercase">Spaceship Captain</h3>
+					<p class="font-bold text-lg  mb-4">{{ship.captain}}</p>
+
+					<h3 class="uppercase">Class</h3>
+					<p class="font-bold text-lg mb-4">{{ship.class}}</p>
+
+					<h3 class="uppercase">Ship Status</h3>
+					<p class="font-bold text-lg mb-4">{{ship.statusString}}</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
 {% endblock %}
