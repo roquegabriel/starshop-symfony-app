@@ -1,20 +1,20 @@
-<aside class="border-r border-r-slate-400 px-5 py-10 h-screen space-y-5">
-			<div class="flex justify-between mb-1">
-				<h2 class="text-3xl font-medium">My Ship Status</h2>
-				<span class="text-3xl">
-					&#8612;
-				</span>
-			</div>
-			<span class="uppercase text-xs bg-slate-400 p-1 rounded-xl">{{myShip.statusString}}</span>
-			<h3 class="">{{myShip.name}}</h3>
-			<div class="grid grid-cols-2">
-				<div>
-					<p class="text-sm text-slate-500">Captain</p>
-					<p class="text-lg">{{myShip.captain}}</p>
-				</div>
-				<div class="border-l border-l-slate-500 px-4">
-					<p class="text-sm text-slate-500">Class</p>
-					<p class="text-lg">{{myShip.class}}</p>
-				</div>
-			</div>
-		</aside>
+<aside class="border-r border-r-slate-400 px-5 py-10 h-screen space-y-5 transition-all" data-controller="closeable">
+	<div class="flex justify-between mb-1">
+		<h2 class="text-3xl font-medium">My Ship Status</h2>
+		<button data-action="closeable#close" class="text-3xl">
+			&#8612;
+		</button>
+	</div>
+	<span class="uppercase text-xs bg-slate-400 p-1 rounded-xl">{{myShip.statusString}}</span>
+	<h3 class="">{{myShip.name}}</h3>
+	<div class="grid grid-cols-2">
+		<div>
+			<p class="text-sm text-slate-500">Captain</p>
+			<p class="text-lg">{{myShip.captain}}</p>
+		</div>
+		<div class="border-l border-l-slate-500 px-4">
+			<p class="text-sm text-slate-500">Class</p>
+			<p class="text-lg">{{myShip.class}}</p>
+		</div>
+	</div>
+</aside>
