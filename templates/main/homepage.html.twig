@@ -3,36 +3,43 @@
 {% endblock %}
 {% block body %}
 
-	<h1>Starshop: your monoploy-busting option for Starship parts!</h1>
-	<p>Browse through
-		{{ships|length * 10}}
-		starships!</p>
+	<main class="grid grid-cols-3">
 
-	{% if ships|length > 300 %}
-		<p>That's a shipload of ships</p>
-	{% endif %}
+		{% include "main/_shipStatusAside.html.twig" %}
 
-	<h2>My Ship</h2>
-	<table>
-		<tr>
-			<th>Name</th>
-			<td>
-				<a href="{{path('app_starship_show', {id: myShip.id})}}">
-					{{myShip.name}}
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<th>Class</th>
-			<td>{{myShip.class}}</td>
-		</tr>
-		<tr>
-			<th>Captain</th>
-			<td>{{myShip.captain}}</td>
-		</tr>
-		<tr>
-			<th>Name</th>
-			<td>{{myShip.status}}</td>
-		</tr>
-	</table>
+		<section class="col-span-2 py-10 px-5 space-y-5">
+			<h2 class="text-3xl font-medium">Ship Repair Queque</h2>
+
+			{% for ship in ships %}
+
+
+				<div class="grid grid-cols-4 gap-2 p-4 bg-slate-700 rounded-md">
+					<div>
+						<img src="{{asset(ship.statusImageFilename)}}" alt="spaceship image {{ship.statusString}}" class="w-20">
+					</div>
+					<div>
+						<span class="uppercase text-xs bg-slate-400 p-1 rounded-xl">{{ship.statusString}}</span>
+						<h2 class="font-bold text-xl mt-1">
+							<a href="{{path('app_starship_show',{id:ship.id})}}">{{ship.name}}</a>
+						</h2>
+					</div>
+					<div>
+						<span class="text-slate-400">Captain</span>
+						<p>{{ship.captain}}</p>
+					</div>
+					<div class="border-l border-l-slate-500 px-4">
+						<span class="text-slate-400">Class</span>
+						<p>{{ship.class}}</p>
+					</div>
+				</div>
+
+			{% endfor %}
+
+
+			<h3>Looking for your next galactic ride?
+				<a href="#" class="underline font-bold">Browse the 30 starship for sale!</a>
+			</h3>
+		</section>
+	</main>
+
 {% endblock %}
