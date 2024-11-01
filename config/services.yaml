@@ -6,8 +6,6 @@
 parameters:
 
 services:
-# config/services.yaml
-    Symfony\Component\Dotenv\Command\DotenvDumpCommand: ~
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
