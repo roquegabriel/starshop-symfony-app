@@ -48,7 +48,6 @@ ENV APP_ENV=prod
 RUN php bin/console cache:clear --no-warmup && \
     php bin/console cache:warmup && \
     php bin/console importmap:install && \
-    php bin/console sass:build --watch && \
     php bin/console tailwind:build --watch && \
     php bin/console asset-map:compile
 
