@@ -1,4 +1,8 @@
-PY composer.json composer.lock /app/
+# Install all the depedencies of your symfony project
+FROM composer:latest as build
+ENV APP_ENV=prod
+WORKDIR /app/
+COPY composer.json composer.lock /app/
 RUN composer install --no-scripts --no-autoloader \
     && composer dump-autoload --optimize
 
