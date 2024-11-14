@@ -14,7 +14,7 @@ COPY . /var/www/html
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts --no-autoloader
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts
 
 EXPOSE 80
 
