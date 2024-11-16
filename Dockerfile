@@ -14,8 +14,7 @@ COPY . /var/www/html
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts --no-autoloader \
-composer dump-autoload
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts
 
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 
