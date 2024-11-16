@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-/usr/bin/symfony tailwind:build
+php bin/console tailwind:build
 exec "$@"
