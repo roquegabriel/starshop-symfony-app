@@ -16,7 +16,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts --no-autoloader
 
+RUN sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!/var/www/html/public!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
 EXPOSE 80
 
-RUN sed -ri -e 's!/var/www/!/var/www/html/public!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 CMD ["apache2-foreground"]
