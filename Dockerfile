@@ -4,7 +4,9 @@ RUN apt-get update && apt-get install -y \
   git zip unzip libpng-dev \
   libzip-dev default-mysql-client
 
-RUN docker-php-ext-install pdo pdo_mysql zip gd
+RUN docker-php-ext-install pdo pdo_mysql zip gd \
+&& docker-php-ext-configure intl \
+&& docker-php-ext-install intl
 
 RUN a2enmod rewrite
 
