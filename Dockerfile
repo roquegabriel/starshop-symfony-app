@@ -1,14 +1,19 @@
 FROM php:8.3-apache
 
-RUN apt-get update && apt-get install -y \
-  git zip unzip libpng-dev \
-  libzip-dev default-mysql-client \
-   && docker-php-ext-configure intl \
-   && docker-php-ext-install intl \
-   && docker-php-ext-install mbstring \
-   && docker-php-ext-install zip \
-   && docker-php-ext-install pdo_mysql
-
+RUN apt update && apt install -y \
+    libicu-dev \
+    libonig-dev \
+    libzip-dev \
+    zip \
+    unzip \
+    curl \
+    git \
+    && git config --global user.email "you@example.com" && git config --global user.name "Your Name" \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install intl \
+    && docker-php-ext-install mbstring \
+    && docker-php-ext-install zip \
+    && docker-php-ext-install pdo_mysql
 RUN docker-php-ext-enable intl mbstring zip pdo_mysql
 
 RUN a2enmod rewrite
