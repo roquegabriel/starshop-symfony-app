@@ -1,10 +1,7 @@
 FROM php:8.3-apache
 
-RUN apt-get update && apt-get install -y \
-  git zip unzip libpng-dev \
-  libzip-dev default-mysql-client
-
-RUN docker-php-ext-install pdo pdo_mysql zip gd \
+RUN apt-get -y update \
+&& apt-get install -y libicu-dev \
 && docker-php-ext-configure intl \
 && docker-php-ext-install intl
 
