@@ -13,7 +13,7 @@ COPY . /var/www/html
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-scripts --no-autoloader
 
 # Install symfony CLI (https://symfony.com/download)
 RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash
