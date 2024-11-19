@@ -25,7 +25,7 @@ class StarshipRepository
                 1,
                 'USS LeafyCruiser (NCC-0001)',
                 'Garden',
-                'Jean-Luc Pickles',
+                'Jean-Luc Picard',
                 StarshipStatusEnum::COMPLETED
             ),
 
@@ -33,7 +33,7 @@ class StarshipRepository
                 2,
                 'USS Expresso (NCC-1234-C)',
                 'Latte',
-                'James T. Quick',
+                'James T. Kirk',
                 StarshipStatusEnum::WAITING
             ),
 
@@ -41,7 +41,7 @@ class StarshipRepository
                 3,
                 'USS Wanderlust (NSS-2024-W)',
                 'Delta Tourist',
-                'Kathryn Journeyway',
+                'Kathryn Janeway',
                 StarshipStatusEnum::IN_PROGRESS
 
             ),
