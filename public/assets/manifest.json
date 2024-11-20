@@ -1,0 +1,20 @@
+{
+    "@symfony\/stimulus-bundle\/controllers.js": "\/assets\/@symfony\/stimulus-bundle\/controllers-2fa9de83e9e5c8f6d08757bec54e145a.js",
+    "@symfony\/stimulus-bundle\/loader.js": "\/assets\/@symfony\/stimulus-bundle\/loader-870999a02e9fc147c034d522826ea70d.js",
+    "@symfony\/ux-turbo\/turbo_controller.js": "\/assets\/@symfony\/ux-turbo\/turbo_controller-ce5e32dafdec0b7752f02e3e2cb25751.js",
+    "@symfony\/ux-turbo\/turbo_stream_controller.js": "\/assets\/@symfony\/ux-turbo\/turbo_stream_controller-a9d0d06c48318d35cc0e0aa27ef6b2dc.js",
+    "app.js": "\/assets\/app-8e03e6dbe2f283051f848709251e9c4e.js",
+    "bootstrap.js": "\/assets\/bootstrap-c423b8bbc1f9cae218c105ca8ca9f767.js",
+    "controllers\/closeable_controller.js": "\/assets\/controllers\/closeable_controller-038f53984c8c99302ee3a50f45ebe139.js",
+    "images\/logo.png": "\/assets\/images\/logo-883cd2f44968dff38df54047f62442b3.png",
+    "images\/spaceship.png": "\/assets\/images\/spaceship-0c24d43ece7c5b9f52b21d00657d3d5c.png",
+    "images\/spaceship1.png": "\/assets\/images\/spaceship1-34e880697f7ee5feca2c297b32d1a11a.png",
+    "images\/spaceship2.png": "\/assets\/images\/spaceship2-bfac3190736e9d9203c6fade69f75885.png",
+    "images\/spaceship3.png": "\/assets\/images\/spaceship3-f9fbdff48f98716e8fb6271a1a365955.png",
+    "images\/status-complete.png": "\/assets\/images\/status-complete-d3f958598037244122580b1b2291aeb5.png",
+    "images\/status-in-progress.png": "\/assets\/images\/status-in-progress-dfb729d200e478db8f8977adc9e7d057.png",
+    "images\/status-waiting.png": "\/assets\/images\/status-waiting-43b1d1ba8bc5cbe0cad2c2e74edbf87d.png",
+    "styles\/app.css": "\/assets\/styles\/app-fdfd79b0951278b2ded0a2d498af631c.css",
+    "vendor\/@hotwired\/stimulus\/stimulus.index.js": "\/assets\/vendor\/@hotwired\/stimulus\/stimulus.index-b5b1d00e42695b8959b4a1e94e3bc92a.js",
+    "vendor\/@hotwired\/turbo\/turbo.index.js": "\/assets\/vendor\/@hotwired\/turbo\/turbo.index-810f44ef1a202a441e4866b7a4c72d11.js"
+}

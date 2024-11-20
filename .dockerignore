@@ -32,13 +32,3 @@ vendor/
 .env.local
 .env.local.php
 .env.test
-# The .dockerignore file excludes files from the container build process.
-#
-# https://docs.docker.com/engine/reference/builder/#dockerignore-file
-
-# The .dockerignore file excludes files from the container build process.
-#
-# https://docs.docker.com/engine/reference/builder/#dockerignore-fil
-
-# Exclude "build-time" ignore files.
-.gcloudignore
